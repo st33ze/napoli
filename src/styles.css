@@ -1,0 +1,45 @@
+:root {
+  --bg-primary: 0deg, 0%, 85%;
+}
+/* ========== CSS RESET ========== */
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: hsl(var(--bg-primary));
+}
+.pizza-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 70%;
+  background: url(./assets/pizza.png) no-repeat right;
+  background-size: contain;
+  /* transform: rotate(90deg); */
+}
