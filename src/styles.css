@@ -1,5 +1,29 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/poppins-regular-webfont.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('./assets/poppins-extralight-webfont.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
 :root {
+  --clr-primary-500: 0deg, 0%, 12%;
+  --clr-secondary-500: 359deg, 86%, 38%;
+  --clr-accent-500: 133deg, 56%, 47%;
   --bg-primary: 0deg, 0%, 85%;
+
+  --ff-primary: 'Poppins', sans-serif;
+
+  --fw-light: 200;
+  --fw-regular: 400;
+  --fs-400: 1rem;
+  --fs-500: 1.5rem;
+  --fs-800: 3rem;
+
 }
 /* ========== CSS RESET ========== */
 /*
@@ -31,15 +55,9 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  font-size: var(--fs-400);
+  font-family: var(--ff-primary);
+  color: var(--clr-primary-500);
   background-color: hsl(var(--bg-primary));
 }
-.pizza-img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;
-  height: 70%;
-  background: url(./assets/pizza.png) no-repeat right;
-  background-size: contain;
-  /* transform: rotate(90deg); */
-}
+
