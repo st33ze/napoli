@@ -1,7 +1,9 @@
-console.log('header loaded');
-// const header = document.getElementById('header');
-// console.log(header);
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
-  console.log(header);
+  const nav = header.querySelector('nav');
+  const menu = header.querySelector('.hamburger-menu');
+  menu.addEventListener('click', () => {
+    menu.classList.toggle('opened');
+    nav.classList.toggle('opened');
+  })
 });
