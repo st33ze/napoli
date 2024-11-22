@@ -10,7 +10,7 @@
 #header .logo {
   width: 50%;
 }
-#header nav {
+#header-nav {
   position: absolute;
   top: 100%;
   left: 0;
@@ -20,7 +20,7 @@
   background-color: inherit;
   transition: height 0.5s ease-in-out;
 }
-#header ul {
+#header-nav ul {
   display: grid;
   row-gap: 1rem;
   justify-items: center;
@@ -34,7 +34,7 @@
   border: none;
   cursor: pointer;
 }
-#header button.button-active {
+#header-nav button.button-active {
   color: hsl(var(--clr-secondary-500));
 }
 #header .contact {

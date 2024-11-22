@@ -1,15 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.getElementById('header');
   const nav = header.querySelector('nav');
-  const hamburgerMenu = header.querySelector('.hamburger-menu');
+  const hamburger = header.querySelector('.hamburger-menu');
   const overlay = document.querySelector('.overlay');
   let isAnimating = false;
-  hamburgerMenu.addEventListener('click', () => {
+  hamburger.addEventListener('click', () => {
     if (isAnimating) return;
     isAnimating = true;
-    hamburgerMenu.classList.toggle('open');
+    const isOpen = hamburger.classList.toggle('open');
     overlay.classList.toggle('active');
     toggleNav(nav);
+    // Update aria attributes for accessibility
+    hamburger.setAttribute('aria-expanded', isOpen);
+    nav.setAttribute('aria-hidden', !isOpen);
     setTimeout(() => {
       isAnimating = false;
     }, 500);
