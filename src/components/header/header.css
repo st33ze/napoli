@@ -18,10 +18,7 @@
   height: 0;
   overflow: hidden;
   background-color: inherit;
-  transition: height 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-#header nav.opened {
-  height: 180px;
+  transition: height 0.5s ease-in-out;
 }
 #header ul {
   display: grid;
@@ -62,23 +59,23 @@
 }
 .hamburger-menu span:first-child {
   top: 0;
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
 }
 .hamburger-menu span:nth-child(2) {
-  transition: width 1s ease, opacity 1s ease;
+  transition: width 0.5s ease, opacity 0.5s ease;
 }
 .hamburger-menu span:last-child {
   bottom: 0;
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
 }
-.hamburger-menu.opened span:first-child {
+.hamburger-menu.open span:first-child {
   transform: rotate(135deg) translate(12px, -12px);
 }
-.hamburger-menu.opened span:nth-child(2){
+.hamburger-menu.open span:nth-child(2){
   width: 0;
   opacity: 0;
 }
-.hamburger-menu.opened span:last-child {
+.hamburger-menu.open span:last-child {
   transform: rotate(-135deg) translate(12px, 12px);
 }
 
