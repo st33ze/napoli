@@ -38,6 +38,9 @@
   border: none;
   cursor: pointer;
 }
+#header button.button-active {
+  color: hsl(var(--clr-secondary-500));
+}
 #header .contact {
   display: none;
 }
