@@ -1,9 +1,15 @@
+import mainHTML from './main.html';
+import './main.css'
 
-import home from './pages/home/home.html';
-import './pages/home/home.css';
-import './pages/home/home.js';
+import {loadHome} from './pages/home/home.js';
 
-document.addEventListener('DOMContentLoaded', () => {
-  const main = document.querySelector('main');
-  main.insertAdjacentHTML('beforeend', home);
-});
+export function loadMain(parent) {
+  parent.insertAdjacentHTML('beforeend', mainHTML);
+  const main = parent.querySelector('main');
+  loadHome(main);
+
+  const overlay = main.querySelector('.overlay');
+  document.addEventListener('toggleMenu', () => {
+    overlay.classList.toggle('active');
+  });
+}
