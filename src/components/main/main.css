@@ -12,3 +12,21 @@
 .overlay.active {
   opacity: 0.5;
 }
+.pizza-img {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 20%;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  background: url(./pizza.webp) no-repeat right;
+  background-size: contain;
+  z-index: -1;
+}
+
+@media screen and (min-height: 550px) {
+  .pizza-img {
+    display: block;
+  }
+}
