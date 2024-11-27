@@ -4,11 +4,6 @@
   align-items: center;
   margin-top: 10vh;
 }
-#page-home h1 {
-  line-height: 2.2rem;
-  font-size: var(--fs-600);
-  font-weight: var(--fw-regular);
-}
 #page-home p {
   font-weight: var(--fw-light);
 }

@@ -1,0 +1,48 @@
+#page-menu {
+  margin-block: 3vh;
+}
+#page-menu h1 {
+  position: relative;
+  text-transform: uppercase;
+  text-align: end;
+}
+#page-menu h1::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 8rem;
+  width: calc(100% - 8rem);
+  height: 1px;
+  background-color: hsl(var(--clr-primary-500), 0.3)
+}
+#page-menu section {
+  margin-top: 3rem;
+}
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#page-menu .icon {
+  width: 2rem;
+  height: 2rem;
+}
+#page-menu ul {
+  display: grid;
+  grid-row-gap: 0.25rem;
+  margin-top: 0.5rem;
+  padding: 0;
+}
+#page-menu li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  list-style: none;
+}
+#page-menu h3 {
+  text-transform: capitalize;
+}
+.ingredients {
+  align-self: start;
+  font-weight: var(--fw-light);
+  line-height: 1rem;
+}
