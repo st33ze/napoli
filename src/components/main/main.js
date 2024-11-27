@@ -7,8 +7,8 @@ import { loadMenu } from './pages/menu/menu.js';
 export function loadMain(parent) {
   parent.insertAdjacentHTML('beforeend', mainHTML);
   const main = parent.querySelector('main');
-  // loadHome(main);
-  loadMenu(main);
+  loadHome(main);
+  // loadMenu(main);
 
   const overlay = main.querySelector('.overlay');
   document.addEventListener('toggleMenu', () => {
