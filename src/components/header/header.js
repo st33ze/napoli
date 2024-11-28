@@ -34,7 +34,11 @@ function toggleNav() {
 hamburger.addEventListener('click', toggleNav);
 
 nav.addEventListener('click', (e) => {
-  if (e.target.dataset.link) toggleNav();
+  if (e.target.dataset.link) {
+    toggleNav();
+    nav.querySelector('.button-active').classList.remove('button-active');
+    e.target.classList.add('button-active');
+  }
   document.dispatchEvent(new CustomEvent('navClick', {detail: e.target.dataset.link}));
 });
 
