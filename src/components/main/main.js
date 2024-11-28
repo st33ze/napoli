@@ -4,32 +4,34 @@ import './main.css'
 import { homePage } from './pages/home/home.js';
 import { menuPage } from './pages/menu/menu.js';
 
-export function loadMain(app) {
-  app.insertAdjacentHTML('beforeend', mainHTML);
-  const main = document.querySelector('main');
 
-  const overlay = main.querySelector('.overlay');
-  document.addEventListener('toggleMenu', () => {
-    overlay.classList.toggle('active');
-  });
+const container = document.createElement('div');
+container.innerHTML = mainHTML;
+const main = container.firstChild;
 
-  const pageContainer = main.querySelector('.page');
-  const routes = {
-    '/': homePage,
-    '/menu': menuPage,
-  }
+const overlay = main.querySelector('.overlay');
+document.addEventListener('toggleMenu', () => {
+  overlay.classList.toggle('active');
+});
 
-  document.addEventListener('navClick', (e) => {
-    console.log(e.detail in routes);
-    if (e.detail in routes) {
-      renderPage(pageContainer, routes[e.detail]);
-    }
-  });
-  
-  renderPage(pageContainer, routes['/']);
+const pageContainer = main.querySelector('.page');
+const routes = {
+  '/': homePage,
+  '/menu': menuPage,
 }
+
+// Initial home page render
+renderPage(pageContainer, routes['/']);
+
+document.addEventListener('navClick', (e) => {
+  if(e.detail in routes) {
+    renderPage(pageContainer, routes[e.detail]);
+  }
+});
 
 function renderPage(container, page) {
   container.innerHTML = '';
   container.appendChild(page);
 }
+
+export { main };
