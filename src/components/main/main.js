@@ -31,7 +31,11 @@ document.addEventListener('navClick', (e) => {
 
 function renderPage(container, page) {
   container.innerHTML = '';
+  container.classList.add('fade-in');
   container.appendChild(page);
+  setTimeout(() => {
+    container.classList.remove('fade-in');
+  }, 1000);
 }
 
 export { main };
