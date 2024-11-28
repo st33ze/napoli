@@ -1,4 +1,4 @@
-#header {
+.header {
   position: sticky;
   top: 0;
   display: flex;
@@ -7,10 +7,10 @@
   background-color: hsl(var(--bg-primary));
   z-index: 100;
 }
-#header .logo {
+.header .logo {
   width: 50%;
 }
-#header-nav {
+.header nav {
   position: absolute;
   top: 100%;
   left: 0;
@@ -20,28 +20,28 @@
   background-color: inherit;
   transition: height 0.5s ease-in-out;
 }
-#header-nav ul {
+.header nav ul {
   display: grid;
   row-gap: 1rem;
   justify-items: center;
   padding: 1rem 0 1rem 0;
   list-style: none;
 }
-#header button {
+.header button {
   background-color: transparent;
   font-size: 1.5rem;
   color: hsl(var(--clr-primary-500));
   border: none;
   cursor: pointer;
 }
-#header-nav button.button-active {
+.header nav button.button-active {
   color: hsl(var(--clr-secondary-500));
 }
-#header .contact {
+.header .contact {
   display: none;
 }
 /* ====================|| Hamburger menu ||==================== */
-#header .hamburger-menu {
+.header .hamburger-menu {
   position: relative;
   display: flex;
   flex-direction: column;
