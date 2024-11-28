@@ -52,6 +52,7 @@ input, button, textarea, select {
 }
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+  font-weight: var(--fw-regular);
 }
 #root, #__next {
   isolation: isolate;
@@ -66,17 +67,14 @@ body {
   padding: 1rem;
 }
 h1 {
-  line-height: 2.2rem;
+  line-height: 2.5rem;
   font-size: var(--fs-700);
-  font-weight: var(--fw-regular);
 }
 h2 {
   line-height: 2rem;
   font-size: var(--fs-600);
-  font-weight: var(--fw-regular);
 }
 h3 {
   line-height: 1.5rem;
   font-size: var(--fs-450);
-  font-weight: var(--fw-regular);
 }
