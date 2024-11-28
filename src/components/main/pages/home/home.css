@@ -1,13 +1,13 @@
-#page-home {
+.page-home {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10vh;
 }
-#page-home p {
+.page-home p {
   font-weight: var(--fw-light);
 }
-#page-home button {
+.page-home button {
   font-size: var(--fs-500);
   margin-top: 5vh;
   padding: 0.5rem 3rem;

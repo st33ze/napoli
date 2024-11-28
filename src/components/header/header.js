@@ -25,7 +25,11 @@ export function loadHeader(parent) {
     setTimeout(() => {
       isAnimating = false;
     }, 500);
-  });  
+  });
+  
+  nav.addEventListener('click', (e) => {
+    document.dispatchEvent(new CustomEvent('navClick', {detail: e.target.dataset.link}));
+  });
 }
 
 function toggleNav(nav) {

@@ -1,12 +1,12 @@
-#page-menu {
+.page-menu {
   margin-block: 3vh;
 }
-#page-menu h1 {
+.page-menu h1 {
   position: relative;
   text-transform: uppercase;
   text-align: end;
 }
-#page-menu h1::before {
+.page-menu h1::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -15,7 +15,7 @@
   height: 1px;
   background-color: hsl(var(--clr-primary-500), 0.3)
 }
-#page-menu section {
+.page-menu section {
   margin-top: 3rem;
 }
 .menu-header {
@@ -23,22 +23,22 @@
   align-items: center;
   justify-content: space-between;
 }
-#page-menu .icon {
+.page-menu .icon {
   width: 2rem;
   height: 2rem;
 }
-#page-menu ul {
+.page-menu ul {
   display: grid;
   grid-row-gap: 0.25rem;
   margin-top: 0.5rem;
   padding: 0;
 }
-#page-menu li {
+.page-menu li {
   display: grid;
   grid-template-columns: 1fr auto;
   list-style: none;
 }
-#page-menu h3 {
+.page-menu h3 {
   text-transform: capitalize;
 }
 .ingredients {
