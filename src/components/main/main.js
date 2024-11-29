@@ -13,6 +13,11 @@ const overlay = main.querySelector('.overlay');
 document.addEventListener('toggleMenu', () => {
   overlay.classList.toggle('active');
 });
+overlay.addEventListener('click', () => {
+  const event = new CustomEvent('toggleMenu');
+  document.dispatchEvent(event);
+  overlay.classList.toggle('active');
+})
 
 const pageContainer = main.querySelector('.page');
 const routes = {

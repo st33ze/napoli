@@ -8,9 +8,11 @@
   opacity: 0;
   transition: opacity 1s ease;
   z-index: 10;
+  pointer-events: none;
 }
 .overlay.active {
   opacity: 0.5;
+  pointer-events: auto;
 }
 @keyframes fadeIn {
   from {
