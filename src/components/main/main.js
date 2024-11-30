@@ -3,6 +3,7 @@ import './main.css'
 
 import { homePage } from './pages/home/home.js';
 import { menuPage } from './pages/menu/menu.js';
+import { contactPage } from './pages/contact/contact.js';
 
 
 const container = document.createElement('div');
@@ -23,6 +24,7 @@ const pageContainer = main.querySelector('.page');
 const routes = {
   '/': homePage,
   '/menu': menuPage,
+  '/contact': contactPage,
 }
 
 // Initial home page render

@@ -1,3 +1,9 @@
+main {
+  flex-grow: 1;
+}
+.page {
+  height: 100%;
+}
 .overlay {
   position: fixed;
   top: 0;
