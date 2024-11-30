@@ -79,7 +79,7 @@ h3 {
   font-size: var(--fs-450);
 }
 #app {
-  display: flex;
-  flex-direction: column;
-  height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100dvh;
 }
