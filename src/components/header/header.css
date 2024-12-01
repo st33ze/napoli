@@ -30,9 +30,6 @@
 .header button {
   background-color: transparent;
   font-size: 1.5rem;
-  color: hsl(var(--clr-primary-500));
-  border: none;
-  cursor: pointer;
 }
 .header nav button.button-active {
   color: hsl(var(--clr-secondary-500));
