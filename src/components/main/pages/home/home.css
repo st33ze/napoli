@@ -14,6 +14,11 @@
   border: none;
   border-radius: 1.5rem;
   background-color: hsl(var(--clr-accent-500));
+  border: 4px solid hsl(var(--clr-accent-500));
+  transition: background-color 0.4s ease;
+}
+.page-home button:hover {
+  background-color: hsl(var(--bg-primary));
 }
 .pizza-img {
   display: none;
