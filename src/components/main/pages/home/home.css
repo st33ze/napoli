@@ -19,21 +19,32 @@
 .page-home button:hover {
   background-color: hsl(var(--bg-primary));
 }
-.pizza-img {
+.pizza-img,
+.basil-img {
   display: none;
   position: absolute;
+  width: auto;
+  aspect-ratio: 16 / 9;
+  z-index: -1;
+}
+.pizza-img {
   bottom: 0;
   right: 0;
   height: 20%;
-  width: auto;
-  aspect-ratio: 16 / 9;
   background: url(./pizza.webp) no-repeat right;
   background-size: contain;
-  z-index: -1;
+}
+.basil-img {
+  bottom: 15vh;
+  left: 10vw;
+  height: 10%;
+  background: url(./basil.webp) no-repeat left;
+  background-size: contain;
 }
 
-@media screen and (min-height: 550px) {
-  .pizza-img {
+@media screen and (min-height: 550px) and (min-width: 300px) {
+  .pizza-img,
+  .basil-img {
     display: block;
   }
 }
