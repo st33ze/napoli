@@ -35,11 +35,10 @@ hamburger.addEventListener('click', toggleNav);
 document.addEventListener('toggleMenu', toggleNav);
 
 nav.addEventListener('click', (e) => {
-  if (e.target.dataset.link) {
-    toggleNav();
-    nav.querySelector('.button-active').classList.remove('button-active');
-    e.target.classList.add('button-active');
-  }
+  if (!e.target.dataset.link || isAnimating) return;
+  toggleNav();
+  nav.querySelector('.button-active').classList.remove('button-active');
+  e.target.classList.add('button-active');
   document.dispatchEvent(new CustomEvent('navClick', {detail: e.target.dataset.link}));
 });
 
