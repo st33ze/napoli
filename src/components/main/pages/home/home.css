@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 10vh;
+  max-width: 800px;
 }
 .page-home p {
   font-weight: var(--fw-light);
@@ -20,7 +21,8 @@
   background-color: hsl(var(--bg-primary));
 }
 .pizza-img,
-.basil-img {
+.basil-img,
+.board-img {
   display: none;
   position: absolute;
   width: auto;
@@ -41,10 +43,30 @@
   background: url(./basil.webp) no-repeat left;
   background-size: contain;
 }
-
+.board-img {
+  left: 0;
+  bottom: 15vh;
+  height: 20%;
+  background: url(./board.webp) no-repeat left;
+  background-size: contain;
+}
 @media screen and (min-height: 550px) and (min-width: 300px) {
   .pizza-img,
   .basil-img {
     display: block;
+  }
+}
+@media screen and (min-height: 800px) and (min-width: 750px) {
+  .pizza-img {
+    height: 25%;
+  }
+  .board-img {
+    display: block;
+  }
+  .basil-img {
+    bottom: 35vh;
+    left: auto;
+    background-position: right;
+    right: 5vw;
   }
 }

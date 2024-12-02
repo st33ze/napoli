@@ -88,3 +88,14 @@ button {
   cursor: pointer;
   border: none;
 }
+
+@media screen and (min-width: 500px) {
+  .container {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .container {
+    padding: 2rem;
+  }
+}
