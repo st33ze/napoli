@@ -31,7 +31,8 @@
   background-color: transparent;
   font-size: var(--fs-500);
 }
-.header nav button.button-active {
+.header nav button.button-active,
+.header nav button:hover {
   color: hsl(var(--clr-secondary-500));
 }
 .header .contact {
@@ -93,6 +94,9 @@
   .header nav ul {
     display: flex;
     padding: 0;
+  }
+  .header nav li {
+    padding-inline: 1rem;
   }
   .header .contact {
     display: flex;
