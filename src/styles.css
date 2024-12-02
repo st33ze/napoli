@@ -65,6 +65,7 @@ body {
 }
 .container {
   padding: 0.5rem;
+  /* max-width: 1300px; */
 }
 .sr-only {
   position: absolute;
@@ -108,5 +109,12 @@ button {
 @media screen and (min-width: 900px) {
   .container {
     padding: 2rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #app {
+    position: relative;
+    width: min(100%, 1500px);
+    justify-self: center;
   }
 }
