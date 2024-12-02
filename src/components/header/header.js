@@ -30,17 +30,32 @@ function toggleNav() {
     isAnimating = false;
   }, 600);
 }
+function handleResize() {
+  if (window.innerWidth < 1100) {
+    hamburger.setAttribute('aria-expanded', false);
+    nav.setAttribute('aria-hidden', true);
+    hamburger.classList.remove('open');
+    nav.style.height = 0;
+  } else {
+    nav.style.height = 'auto';
+    hamburger.setAttribute('aria-expanded', true);
+    nav.setAttribute('aria-hidden', false);
+  }
+}
 
 hamburger.addEventListener('click', toggleNav);
 document.addEventListener('toggleMenu', toggleNav);
 
 nav.addEventListener('click', (e) => {
   if (!e.target.dataset.link || isAnimating) return;
-  toggleNav();
+  if (window.innerWidth < 1100) toggleNav();
   nav.querySelector('.button-active').classList.remove('button-active');
   e.target.classList.add('button-active');
   document.dispatchEvent(new CustomEvent('navClick', {detail: e.target.dataset.link}));
 });
 
+window.addEventListener('resize', handleResize);
+
+handleResize();
 
 export { header };
