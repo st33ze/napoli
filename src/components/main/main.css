@@ -33,3 +33,10 @@ main {
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+@media screen and (min-width: 1100px) {
+  .page {
+    justify-content: start;
+  }
+  .overlay {display: none;}
+}

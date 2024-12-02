@@ -19,6 +19,7 @@ overlay.addEventListener('click', () => {
   document.dispatchEvent(event);
   overlay.classList.toggle('active');
 })
+window.addEventListener('resize', () => overlay.classList.remove('active'));
 
 const pageContainer = main.querySelector('.page');
 const routes = {
