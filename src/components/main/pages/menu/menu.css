@@ -1,14 +1,18 @@
 .page-menu {
-  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
   width: 100%;
 }
 .page-menu h1 {
-  position: relative;
+  margin-left: auto;
+  padding: 1.5rem 3rem;
+  background-color: hsla(var(--clr-primary-500), 0.1);
+  border-bottom-left-radius: 3rem;
   text-transform: uppercase;
   text-align: end;
 }
 .page-menu section {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .menu-header {
   display: flex;
