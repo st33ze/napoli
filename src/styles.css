@@ -57,6 +57,9 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
+html {
+  overflow-y:  scroll;
+}
 body {
   font-size: var(--fs-400);
   font-family: var(--ff-primary);
@@ -65,7 +68,6 @@ body {
 }
 .container {
   padding: 0.5rem;
-  /* max-width: 1300px; */
 }
 .sr-only {
   position: absolute;

@@ -1,19 +1,11 @@
 .page-menu {
   margin-block: 2rem;
+  width: 100%;
 }
 .page-menu h1 {
   position: relative;
   text-transform: uppercase;
   text-align: end;
-}
-.page-menu h1::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 8rem;
-  width: calc(100% - 8rem);
-  height: 1px;
-  background-color: hsl(var(--clr-primary-500), 0.3)
 }
 .page-menu section {
   margin-top: 3rem;
@@ -37,6 +29,10 @@
   display: grid;
   grid-template-columns: 1fr auto;
   list-style: none;
+  border-block: 1px solid transparent;
+}
+.page-menu li:hover {
+  border-color: hsl(var(--clr-accent-500));
 }
 .page-menu h3 {
   text-transform: capitalize;
@@ -45,4 +41,17 @@
   align-self: start;
   font-weight: var(--fw-light);
   line-height: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-header {
+    width: calc(50% - 1rem);
+  }
+  .page-menu li {
+    grid-column-gap: 0.5rem;
+  }
+  .page-menu ul {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
 }
