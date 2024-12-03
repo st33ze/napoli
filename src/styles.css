@@ -57,14 +57,12 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 }
-html {
-  overflow-y:  scroll;
-}
 body {
   font-size: var(--fs-400);
   font-family: var(--ff-primary);
   color: hsl(var(--clr-primary-500));
   background-color: hsl(var(--bg-primary));
+  overflow-y: scroll;
 }
 .container {
   padding: 0.5rem;

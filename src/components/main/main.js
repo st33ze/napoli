@@ -32,11 +32,17 @@ const routes = {
 renderPage(pageContainer, routes['/']);
 
 document.addEventListener('navClick', (e) => {
-  if(e.detail in routes) {
-    renderPage(pageContainer, routes[e.detail]);
-  }
+  if(e.detail in routes) navigateTo(e.detail);
+});
+window.addEventListener('popstate', () => {
+  renderPage(pageContainer, routes[window.location.pathname]);
 });
 
+function navigateTo(path) {
+  if (window.location.pathname === path) return;
+  history.pushState(null, '', path);
+  renderPage(pageContainer, routes[path]);
+}
 function renderPage(container, page) {
   container.innerHTML = '';
   container.classList.add('fade-in');
