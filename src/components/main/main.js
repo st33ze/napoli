@@ -35,7 +35,10 @@ document.addEventListener('navClick', (e) => {
   if(e.detail in routes) navigateTo(e.detail);
 });
 window.addEventListener('popstate', () => {
-  renderPage(pageContainer, routes[window.location.pathname]);
+  const path = window.location.pathname;
+  renderPage(pageContainer, routes[path]);
+  document.querySelector('.button-active').classList.remove('button-active');
+  document.querySelector(`[data-link="${path}"]`).classList.add('button-active');
 });
 
 function navigateTo(path) {
