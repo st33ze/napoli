@@ -22,7 +22,7 @@
 }
 .pizza-img,
 .basil-img,
-.board-img {
+.basil-right-img {
   display: none;
   position: absolute;
   width: auto;
@@ -43,13 +43,15 @@
   background: url(./basil.webp) no-repeat left;
   background-size: contain;
 }
-.board-img {
-  left: 0;
-  bottom: 15%;
-  height: 20%;
-  background: url(./board.webp) no-repeat left;
+.basil-right-img {
+  bottom: 40%;
+  right: 20%;
+  height: 5%;
+  background: url(./basil.webp) no-repeat right;
   background-size: contain;
+  transform: rotate(90deg);
 }
+
 @media screen and (min-height: 600px) and (min-width: 300px) {
   .pizza-img,
   .basil-img {
@@ -58,21 +60,9 @@
 }
 @media screen and (min-height: 600px) and (min-width: 750px) {
   .pizza-img {
-    height: 30%;
+    height: min(30%, 300px);
   }
-  .board-img {
+  .basil-right-img {
     display: block;
-  }
-  .basil-img {
-    bottom: 35%;
-    left: auto;
-    background-position: right;
-    right: 5%;
-  }
-}
-@media screen and (min-height: 800px) and (min-width: 1100px) {
-  .basil-img {
-    bottom: 40%;
-    right: 35%
   }
 }
