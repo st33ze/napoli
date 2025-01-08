@@ -91,9 +91,9 @@ h3 {
   font-size: var(--fs-450);
 }
 #app {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
 }
 button {
   color: hsl(var(--clr-primary-500));

@@ -1,10 +1,13 @@
 main {
-  flex-grow: 1;
+  flex: 1;
+  overflow-y: hidden;
 }
 .page {
   height: 100%;
   display: flex;
   justify-content: center;
+  overflow-y: auto;
+  scrollbar-width: thin;
 }
 .overlay {
   position: fixed;
@@ -35,6 +38,9 @@ main {
 }
 
 @media screen and (min-width: 1100px) {
+  main {
+    overflow: visible;
+  }
   .page {
     justify-content: start;
   }
